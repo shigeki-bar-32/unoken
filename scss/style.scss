@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+/*テンプレート専用cssファイルの読み込み
+---------------------------------------------------------------------------*/
+@use "mainimg";
+@use "inview";
+
 /*Font Awesomeの読み込み
 ---------------------------------------------------------------------------*/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
@@ -7,11 +12,6 @@
 /*Google Fontsの読み込み
 ---------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
-
-/*テンプレート専用cssファイルの読み込み
----------------------------------------------------------------------------*/
-@import url("inview.css");
-@import url("mainimg.css");
 
 /*CSSカスタムプロパティ（サイト全体を一括管理する為の設定）
 ---------------------------------------------------------------------------*/
@@ -162,10 +162,10 @@ a:hover {
 // $content-space: 4rem; // 既存CSSの--content-spaceに対応
 
 header {
-    padding: 1rem var(--content-space); // CSS変数のまま利用
-    color: #fff;
-    position: absolute;
-    width: 100%;
+  padding: 1rem var(--content-space); // CSS変数のまま利用
+  color: #fff;
+  position: absolute;
+  width: 100%;
   
     a {
       color: inherit;
