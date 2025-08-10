@@ -63,13 +63,13 @@
                 <td>
                   <input
                     name="item1"
-                    value="<?php echo $form['item1']; ?>"
+                    value=""
                     type="text"
                     size="40"
                     maxlength="500"
                     class="ws"
                   />
-                  <?php if ($msg['item1']) echo '<div style="color:red">' . $msg['item1'] . '</div>'; ?>
+                  <?php if ($msg['item1']) echo '<div style="color:red"></div>
                 </td>
               </tr>
               <tr>
@@ -77,20 +77,20 @@
                 <td>
                   <input
                     name="item2"
-                    value="<?php echo $form['item2']; ?>"
+                    value=""
                     type="text"
                     size="40"
                     maxlength="500"
                     class="ws"
                   />
-                  <?php if ($msg['item2']) echo '<div style="color:red">' . $msg['item2'] . '</div>'; ?>
+                  <?php if ($msg['item2']) echo '<div style="color:red"></div>
                 </td>
               </tr>
               <tr>
                 <th>お問い合わせ内容<span style="color:red">※</span></th>
                 <td>
-                  <textarea name="item3" cols="40" rows="10" class="wl"><?php echo $form['item3']; ?></textarea>
-                  <?php if ($msg['item3']) echo '<div style="color:red">' . $msg['item3'] . '</div>'; ?>
+                  <textarea name="item3" cols="40" rows="10" class="wl"></textarea>
+                  <?php if ($msg['item3']) echo '<div style="color:red"></div>
                 </td>
               </tr>
             </table>

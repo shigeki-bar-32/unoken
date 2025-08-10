@@ -13,6 +13,7 @@
 @import url("inview.css");
 @import url("mainimg.css");
 
+
 /*CSSカスタムプロパティ（サイト全体を一括管理する為の設定）
 ---------------------------------------------------------------------------*/
 :root {
@@ -164,6 +165,7 @@ a:hover {
 header {
     padding: 1rem var(--content-space); // CSS変数のまま利用
     color: #fff;
+    z-index: 50;
     position: absolute;
     width: 100%;
   

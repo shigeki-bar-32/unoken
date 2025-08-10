@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="茨城町にある建設会社、宇野建設工業株式会社のホームページです"/>
     <title>uno.company</title>
-    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -13,59 +12,56 @@
   <body>
     <!-- header -->
     <header>
-      <div class="wrapper">
-        <header class="header">
-         <div class="header__container">
-           <div class="header__logo"><a href="index.html"><img src="image/uno 1st.png" alt="宇野建設ロゴ"/></a></div>
-             <button type="button" id="js-button-drawer" class="header__menu-button">Menu</button>
-             <div id="js-drawer" class="header__contents">
-               <nav class="header__nav">
-                 <ul class="header__nav-list">
-                   <li class="header__nav-item">
-                    <a href="index.html" class="header__nav-link button">
-                      <span class="button__text">ホーム -</span>
-                     </a>
-                    </li>
-                    <li class="header__nav-item">
-                     <a href="jirei.html" class="header__nav-link button">
-                      <span class="button__text">制作事例 -</span>
-                     </a>
-                    </li>
-                    <li class="header__nav-item">
-                     <a href="sekou.html" class="header__nav-link button">
-                      <span class="button__text">施工事例 -</span>
-                     </a>
-                    </li>
-                    <li class="header__nav-item">
-                     <a href="saiyou.html" class="header__nav-link button">
-                      <span class="button__text">採用情報 -</span>
-                     </a>
-                    </li>
-                    <li class="header__nav-item">
-                     <a href="company.html" class="header__nav-link button">
-                      <span class="button__text">企業情報 -</span>
-                      </a>
-                    </li>
-                    <li class="header__nav-item">
-                     <a href="contact.html" class="header__nav-link button button--border">
-                      <span class="button__text">お問い合わせ・資料請求 -</span>
-                     </a>
-                    </li>
-                 </ul>
-               </nav>
-             </div>
-         </div>
-       </div>
-     </header>
-  <!-- header -->
 
+      <h1 id="logo">
+        <a href="index.html">
+          <img src="images/uno 1st.png" alt="uno.company" />
+        </a>
+      </h1>
+
+      <!--開閉メニュー-->
+      <div id="menubar">
+        <nav>
+          <ul>
+            <li><a href="#kodawari">私たちのこだわり</a></li>
+            <li><a href="#service">サービス紹介</a></li>
+            <li><a href="#flow">ご利用の流れ</a></li>
+            <li><a href="#voice">お客様の声</a></li>
+            <li><a href="#faq">よく頂く質問</a></li>
+            <li><a href="#footer">アクセス</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!--/#menubar（開閉メニュー）-->
+
+      <div id="header-box">
+        <ul class="btn">
+          <li><a href="form.html"><i class="fa-solid fa-envelope"></i>お問い合わせ</a></li>
+          <li><a href="company.html"><i class="fa-solid fa-phone-volume"></i>お電話でのご予約</a></li>
+        </ul>
+      </div>
+
+    </header>
+    <!--▲▲▲▲▲ここまで「ヘッダー」-->
+
+    <div class="check-animation">
+      <svg viewBox="0 0 52 52">
+        <circle class="check-circle" cx="26" cy="26" r="25" fill="none"/>
+        <path class="check-mark" fill="none" d="M14 27l7 7 16-16"/>
+      </svg>
+      <p>送信が完了しました！</p>
+    </div>
+    
           <div id="contents">
-            <main>
+            <!-- <main>
               <section>
                 <h2>送信完了<span>Contact</span></h2>
                 <p>送信が完了しました。</p>          
               </section>
-            </main>
+            </main> -->
+
+           
+            
           </div>
           <!--/#contents-->
 

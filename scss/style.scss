@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+/*テンプレート専用cssファイルの読み込み
+---------------------------------------------------------------------------*/
+@use "./inview";
+@use "./mainimg";
+
+
 /*Font Awesomeの読み込み
 ---------------------------------------------------------------------------*/
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
@@ -7,11 +13,6 @@
 /*Google Fontsの読み込み
 ---------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
-
-/*テンプレート専用cssファイルの読み込み
----------------------------------------------------------------------------*/
-@import url("inview.css");
-@import url("mainimg.css");
 
 /*CSSカスタムプロパティ（サイト全体を一括管理する為の設定）
 ---------------------------------------------------------------------------*/
@@ -162,11 +163,11 @@ a:hover {
 // $content-space: 4rem; // 既存CSSの--content-spaceに対応
 
 header {
-    padding: 1rem var(--content-space); // CSS変数のまま利用
-    color: #fff;
-    position: absolute;
-    width: 100%;
-  
+  padding: 1rem var(--content-space); // CSS変数のまま利用
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  z-index: 50;
     a {
       color: inherit;
     }
@@ -1236,10 +1237,51 @@ animationの行の「0.2s」が文字の出現のなめらかさで、大きい�
     padding: 1rem;
     font-size: 1rem;
   }
+
+
+  // finish.html
+  .check-animation {
+    svg { overflow: visible; }
+    display: flex;
+    flex-direction: column; // 縦並び
+    align-items: center;    // 横中央
+    justify-content: center; // 縦中央
+    min-height: 100vh;      // 画面の高さ全体を使う
   
+   svg {
+      width: 55rem;   /* ← ここでサイズ調整（例: 60px） */
+      height: 160px;
+      display: block;
+      margin: 0 auto 10px;
+    }
 
+  .check-circle {
+    stroke: #4CAF50;
+    stroke-width: 3;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: stroke 0.6s ease forwards;
+  }
+  .check-mark {
+    stroke: #4CAF50;
+    stroke-width: 3;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s ease 0.6s forwards;
+  }
+  @keyframes stroke {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 
-
-
-
-
+  p {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #333; // 濃いグレー（黒に近い）
+    font-weight: 500; // 少し太字で視認性UP
+  }
+}
+  
+  
+  

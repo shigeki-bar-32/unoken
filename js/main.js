@@ -389,24 +389,32 @@ $(document).ready(function() {
 //===============================================================
 // テキストのフェードイン効果
 //===============================================================
-$(function() {
-    $('.fade-in-text').on('inview', function(event, isInView) {
-        // この要素が既にアニメーションされたかどうかを確認
-        if (isInView && !$(this).data('animated')) {
-            // アニメーションがまだ実行されていない場合
-            let innerHTML = '';
-            const text = $(this).text();
-            $(this).text('');
+// $(function() {
+//     $('.fade-in-text').on('inview', function(event, isInView) {
+        
+//         if (isInView && !$(this).data('animated')) {
 
-            for (let i = 0; i < text.length; i++) {
-                innerHTML += `<span class="char" style="animation-delay: ${i * 0.1}s;">${text[i]}</span>`;
-            }
+//             let innerHTML = '';
+//             const text = $(this).text();
+//             $(this).text('');
 
-            $(this).html(innerHTML).css('visibility', 'visible');
-            // アニメーションが実行されたことをマーク
-            $(this).data('animated', true);
-        }
-    });
+//             for (let i = 0; i < text.length; i++) {
+//                 innerHTML += `<span class="char" style="animation-delay: ${i * 0.1}s;">${text[i]}</span>`;
+//             }
+
+//             $(this).html(innerHTML).css('visibility', 'visible');
+            
+//             $(this).data('animated', true);
+//         }
+//     });
+// });
+
+window.addEventListener('load', () => {
+  confetti({
+    particleCount: 80,
+    spread: 60,
+    origin: { y: 0.6 }
+  });
 });
 
 // form.html (メール送信画面)
